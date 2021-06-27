@@ -33,9 +33,10 @@
         android:id="@+id/textViewNumero1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Digite o primeiro número"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="161dp" />
+        app:layout_constraintStart_toStartOf="@+id/textViewResult"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResult" />
 
     <TextView
         android:id="@+id/textViewNumero2"
@@ -106,6 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
+        android:onClick="calcular"
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroupOperacao"
         app:layout_constraintStart_toEndOf="@+id/radioGroupOperacao" />
@@ -116,8 +118,21 @@
         android:layout_height="40dp"
         android:layout_marginTop="16dp"
         android:text="----"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textViewResultTitulo"
         app:layout_constraintTop_toBottomOf="@+id/textViewResultTitulo" />
+
+    <Button
+        android:id="@+id/buttonLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:onClick="limpar"
+        android:text="Limpar"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroupOperacao"
+        app:layout_constraintStart_toEndOf="@+id/buttonCalcular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

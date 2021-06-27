@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void calcular(View view){
         Double resultado = 0.0;
-        Double numero1 = 0.0;
-        Double numero2 = 0.0;
+        Double numero1 = Double.parseDouble(editTextNumero1.getText().toString());
+        Double numero2 = Double.parseDouble(editTextNumero2.getText().toString());
 
         switch(radioGroupOperacao.getCheckedRadioButtonId()){
             case R.id.radioButtonSoma:
