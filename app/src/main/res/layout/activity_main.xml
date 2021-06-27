@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewResultado"
+        android:id="@+id/textViewResultTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -29,25 +29,13 @@
         app:layout_constraintStart_toStartOf="@+id/textViewTitulo"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitulo" />
 
-    <EditText
-        android:id="@+id/editTextResultado"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textViewResultado"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResultado" />
-
     <TextView
         android:id="@+id/textViewNumero1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="Digite o primeiro número"
-        app:layout_constraintStart_toStartOf="@+id/editTextResultado"
-        app:layout_constraintTop_toBottomOf="@+id/editTextResultado" />
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="161dp" />
 
     <TextView
         android:id="@+id/textViewNumero2"
@@ -90,6 +78,7 @@
             android:id="@+id/radioButtonSoma"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:checked="true"
             android:text="Somar" />
 
         <RadioButton
@@ -120,5 +109,15 @@
         android:text="Calcular"
         app:layout_constraintBottom_toBottomOf="@+id/radioGroupOperacao"
         app:layout_constraintStart_toEndOf="@+id/radioGroupOperacao" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="----"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewResultTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewResultTitulo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
