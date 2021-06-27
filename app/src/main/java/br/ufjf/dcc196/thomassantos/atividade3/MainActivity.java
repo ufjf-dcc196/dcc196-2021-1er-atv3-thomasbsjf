@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -24,6 +25,12 @@ public class MainActivity extends AppCompatActivity {
         editTextNumero2 = findViewById(R.id.editTextNumero2);
         radioGroupOperacao = findViewById(R.id.radioGroupOperacao);
 
+        radioGroupOperacao.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                calcular(group);
+            }
+        });
     }
 
     public void calcular(View view){
